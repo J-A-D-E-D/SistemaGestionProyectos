@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="ejemplomintic" />
         <module name="ProyectoFinal" />
+        <module name="SistemaGestionProyectos" />
       </profile>
     </annotationProcessing>
   </component>

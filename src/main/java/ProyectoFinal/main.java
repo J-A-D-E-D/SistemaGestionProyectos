@@ -2,7 +2,7 @@ import ProyectoFinal.Empleado;
 import ProyectoFinal.Empresa;
 import ProyectoFinal.MovimientoDinero;
 
-public class main {
+public class main{
         public static void main(String[] args) {
                 Empleado empleado = new Empleado();
                 Empresa empresa = new Empresa();
@@ -22,7 +22,22 @@ public class main {
                 movimientodinero.setConceptoMovimiento("hola");
                 movimientodinero.setTipoMonto(true);
 
+                System.out.println("Datos de la empresa: ");
+                System.out.println(empresa.getNombreEmpresa());
+                System.out.println(empresa.getDireccionEmpresa());
+                System.out.println(empresa.getTelefonoEmpresa());
+                System.out.println(empresa.getNitEmpresa());
+
+                System.out.println("Datos del Empleado: ");
                 System.out.println(empleado.getNombreEmpleado());
+                System.out.println(empleado.getCorreoEmpleado());
+                System.out.println(empleado.getEmpresaEmpleado());
+                System.out.println(empleado.getRolEmpleado());
+
+                System.out.println("Datos sobre el movimiento del dinero: ");
                 System.out.println(movimientodinero.getMontoMovimiento());
+                System.out.println(movimientodinero.isTipoMonto());
+                System.out.println(movimientodinero.getConceptoMovimiento());
+                System.out.println(movimientodinero.getUsuarioEncargado());
         }
 }
