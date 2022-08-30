@@ -9,7 +9,7 @@ public class main{
                 Empleado empleado = new Empleado();
                 Empresa empresa = new Empresa();
                 MovimientoDinero movimientodinero = new MovimientoDinero();
-                empleado.setNombreEmpleado("Andres");
+                empleado.setNombreEmpleado("Diego");
                 empleado.setCorreoEmpleado("pepito@gmail.com");
                 empleado.setEmpresaEmpleado("JADED");
                 empleado.setRolEmpleado("administrador");
