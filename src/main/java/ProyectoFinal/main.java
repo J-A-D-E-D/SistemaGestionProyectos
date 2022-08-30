@@ -1,6 +1,8 @@
 import ProyectoFinal.Empleado;
 import ProyectoFinal.Empresa;
 import ProyectoFinal.MovimientoDinero;
+import lombok.Data;
+
 
 public class main{
         public static void main(String[] args) {
