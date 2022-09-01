@@ -1,7 +1,4 @@
-import ProyectoFinal.Empleado;
-import ProyectoFinal.Empresa;
-import ProyectoFinal.MovimientoDinero;
-import lombok.Data;
+package ProyectoFinal.Model;
 
 
 public class main{
