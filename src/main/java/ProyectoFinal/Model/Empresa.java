@@ -1,4 +1,4 @@
-package ProyectoFinal;
+package ProyectoFinal.Model;
 
 import lombok.Data;
 
