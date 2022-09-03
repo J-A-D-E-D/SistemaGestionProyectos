@@ -21,7 +21,7 @@ public class Perfil {
     private String telefonoUsuario;
 
     @Column(length = 30, nullable = false)
-    private String ImagenUsuario;
+    private String imagenUsuario;
 
     @OneToOne
     @JoinColumn(name = "Id_Empleado", nullable = false)
