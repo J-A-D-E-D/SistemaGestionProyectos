@@ -25,13 +25,13 @@ public class empresa {
     @Column(length = 80, nullable = false)
     private String direccionEmpresa;
 
-    @OneToMany
+/*    @OneToMany
     @JoinColumn(name = "Usuario", nullable = false)
     private com.jaded.sistemagestionproyectos.model.perfil perfil;
 
     @OneToMany
     @JoinColumn(name = "Transaction", nullable = false)
-    private com.jaded.sistemagestionproyectos.model.movimientoDinero movimientoDinero;
+    private com.jaded.sistemagestionproyectos.model.movimientoDinero movimientoDinero;*/
 
 
 
