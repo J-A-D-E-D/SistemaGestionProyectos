@@ -19,8 +19,8 @@ public class movimientoDinero {
     private float montoMovimiento;
 
     @ManyToOne
-    @JoinColumn(name = "UsuarioEncargado", nullable = false)
-    private com.jaded.sistemagestionproyectos.model.perfil perfil;
+    @JoinColumn(name = "IdEmpleado", nullable = false)
+    private com.jaded.sistemagestionproyectos.model.empleado empleado;
 
     @ManyToOne
     @JoinColumn(name = "Empresa", nullable = false)
