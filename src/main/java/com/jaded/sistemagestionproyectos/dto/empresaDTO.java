@@ -11,6 +11,6 @@ public class empresaDTO {
     private Integer idEmpresa;
     private String nombreEmpresa;
     private String direccionEmpresa;
-    private long telefonoEmpresa;
-    private long nitEmpresa;
+    private String telefonoEmpresa;
+    private String nitEmpresa;
 }

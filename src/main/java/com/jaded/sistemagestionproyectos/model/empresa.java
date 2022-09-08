@@ -11,18 +11,18 @@ public class empresa {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long IdEmpresa;
+    private Integer IdEmpresa;
 
-    @Column(length = 40, nullable = false)
+    @Column(length = 40)
     private String nombreEmpresa;
 
-    @Column(length = 20, nullable = false)
+    @Column(length = 20)
     private String nitEmpresa;
 
-    @Column(length = 20, nullable = false)
+    @Column(length = 20)
     private String telefonoEmpresa;
 
-    @Column(length = 80, nullable = false)
+    @Column(length = 80)
     private String direccionEmpresa;
 
 /*    @OneToMany
