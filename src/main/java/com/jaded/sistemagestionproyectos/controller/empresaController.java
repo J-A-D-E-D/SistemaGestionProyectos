@@ -46,12 +46,8 @@ public class empresaController {
         if (e == null){
             throw new modelNotFoundException("Id #"+empresadto.getIdEmpresa() + " no encontrado");
         }
-        e.setNombreEmpresa(empresadto.getNombreEmpresa());
-        e.setDireccionEmpresa(empresadto.getDireccionEmpresa());
-        e.setTelefonoEmpresa(empresadto.getTelefonoEmpresa());
-        e.setNitEmpresa(empresadto.getNitEmpresa());
-        //final User updatedUser = userRepository.save(user);apper.map(empresadto, empresa.class));
-        empresaDTO dto = mapper.map(e, empresaDTO.class);
+        empresa em =service.update(mapper.map(empresadto, empresa.class));
+        empresaDTO dto = mapper.map(em, empresaDTO.class);
         return new ResponseEntity<>(dto, HttpStatus.OK);
     }
 
