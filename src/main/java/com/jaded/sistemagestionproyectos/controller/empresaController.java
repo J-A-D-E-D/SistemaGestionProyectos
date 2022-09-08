@@ -1,5 +1,6 @@
 package com.jaded.sistemagestionproyectos.controller;
 import com.jaded.sistemagestionproyectos.dto.empresaDTO;
+import com.jaded.sistemagestionproyectos.exception.modelNotFoundException;
 import com.jaded.sistemagestionproyectos.model.empresa;
 import com.jaded.sistemagestionproyectos.service.IempresaService;
 import org.modelmapper.ModelMapper;
@@ -15,7 +16,7 @@ import java.util.stream.Collectors;
 
 
 @RestController
-@RequestMapping("/empresa")
+@RequestMapping("/enterprise")
 public class empresaController {
 
     @Autowired
@@ -37,7 +38,31 @@ public class empresaController {
         empresa e = service.create(mapper.map(empresadto, empresa.class));
         empresaDTO dto = mapper.map(e, empresaDTO.class);
         return new ResponseEntity<>(dto, HttpStatus.CREATED);
+    }
 
+    @PatchMapping("/{id}")
+    public ResponseEntity<empresaDTO> updatePartially ( @PathVariable(value ="id") Integer id , @Valid @RequestBody empresaDTO empresadto) throws Exception {
+        empresa e = service.readById(id);
+        if (e == null){
+            throw new modelNotFoundException("Id #"+empresadto.getIdEmpresa() + " no encontrado");
+        }
+        e.setNombreEmpresa(empresadto.getNombreEmpresa());
+        e.setDireccionEmpresa(empresadto.getDireccionEmpresa());
+        e.setTelefonoEmpresa(empresadto.getTelefonoEmpresa());
+        e.setNitEmpresa(empresadto.getNitEmpresa());
+        //final User updatedUser = userRepository.save(user);apper.map(empresadto, empresa.class));
+        empresaDTO dto = mapper.map(e, empresaDTO.class);
+        return new ResponseEntity<>(dto, HttpStatus.OK);
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> delete(@PathVariable("id") Integer id) throws Exception{
+        empresa e = service.readById(id);
+        if(e == null){
+            throw new modelNotFoundException("Id no encontrado: " + id);
+        }
+        service.delete(id);
+        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 
 }
