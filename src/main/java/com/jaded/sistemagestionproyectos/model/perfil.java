@@ -23,7 +23,7 @@ public class perfil {
     @Column(length = 30, nullable = false)
     private String imagenUsuario;
 
-    @OneToOne
+   /* @OneToOne
     @JoinColumn(name = "Id_Empleado", nullable = false)
-    private empleado usuario;
+    private empleado usuario;*/
 }

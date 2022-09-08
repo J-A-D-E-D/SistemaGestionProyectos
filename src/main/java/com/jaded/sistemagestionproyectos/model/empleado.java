@@ -3,6 +3,7 @@ package com.jaded.sistemagestionproyectos.model;
 import lombok.Data;
 
 import javax.persistence.*;
+import javax.validation.constraints.Email;
 
 
 @Data
@@ -13,6 +14,7 @@ public class empleado {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long IdEmpleado;
 
+    //@Email
     @Column(length = 70, nullable = false)
     private String correoEmpleado;
 
