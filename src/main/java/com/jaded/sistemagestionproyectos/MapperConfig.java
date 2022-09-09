@@ -12,5 +12,12 @@ public class MapperConfig {
         return new ModelMapper();
 
     }
-
+    @Bean("empleadoMapper")
+    public ModelMapper empleadoMapper(){
+        return new ModelMapper();
+    }
+    @Bean("perfilMapper")
+    public ModelMapper perfilMapper(){
+        return new ModelMapper();
+    }
 }
