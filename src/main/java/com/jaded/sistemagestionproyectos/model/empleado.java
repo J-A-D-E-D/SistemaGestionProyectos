@@ -19,15 +19,15 @@ public class empleado {
     private String correoEmpleado;
 
     @OneToOne
-    @JoinColumn(name = "idPerfil")
+    @JoinColumn(name = "idperfil")
     private perfil perfilEmpleado;
 
     @OneToOne
-    @JoinColumn(name= "rol")
+    @JoinColumn(name= "idrole")
     private rol rolEmpleado;
 
     @ManyToOne
-    @JoinColumn(name = "EmpresaEmpleado")
+    @JoinColumn(name = "idempresa")
     private empresa empresaEmpleado;
 
    /* @OneToMany

@@ -25,6 +25,8 @@ public class empleadoController {
     @Qualifier("empleadoMapper")
     private ModelMapper mapper;
 
+
+
     @GetMapping
     public ResponseEntity<List<empleadoDTO>> readAll() throws Exception{
         List<empleadoDTO> list = service.readAll().stream()
