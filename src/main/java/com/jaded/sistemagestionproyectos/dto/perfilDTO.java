@@ -9,8 +9,9 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class perfilDTO {
     private Integer idPerfil;
-    private String imagen;
-    private String telefono;
-    private Integer idEmpleado;
+    private String nombreUsuario;
+    private String imagenUsuario;
+    private String telefonoUsuario;
+    //private Integer idEmpleado;
 
 }

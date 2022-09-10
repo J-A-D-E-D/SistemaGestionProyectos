@@ -1,12 +1,8 @@
 package com.jaded.sistemagestionproyectos.controller;
 
 import com.jaded.sistemagestionproyectos.dto.empleadoDTO;
-import com.jaded.sistemagestionproyectos.dto.empresaDTO;
-import com.jaded.sistemagestionproyectos.dto.perfilDTO;
 import com.jaded.sistemagestionproyectos.exception.modelNotFoundException;
 import com.jaded.sistemagestionproyectos.model.empleado;
-import com.jaded.sistemagestionproyectos.model.perfil;
-import com.jaded.sistemagestionproyectos.repository.Iempleado;
 import com.jaded.sistemagestionproyectos.service.IempleadoService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,7 +17,7 @@ import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/employee")
-public class EmpleadoController {
+public class empleadoController {
     @Autowired
     private IempleadoService service;
 

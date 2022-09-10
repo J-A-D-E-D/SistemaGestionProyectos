@@ -9,9 +9,9 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class empleadoDTO {
         private Integer idEmpleado;
-        private String nombreEmpleado;
         private String correoEmpleado;
         private String empresaEmpleado;
+        private Integer perfilEmpleado;
         private String rolEmpleado;
         // comentario de prueba Julio //
     }

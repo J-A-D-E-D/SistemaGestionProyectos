@@ -12,23 +12,23 @@ import javax.validation.constraints.Email;
 public class empleado {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long IdEmpleado;
+    private long idEmpleado;
 
     //@Email
-    @Column(length = 70, nullable = false)
+    @Column(length = 70)
     private String correoEmpleado;
 
     @OneToOne
-    @JoinColumn(name = "id_user", nullable = false)
-    private com.jaded.sistemagestionproyectos.model.perfil perfil;
+    @JoinColumn(name = "idPerfil")
+    private perfil perfilEmpleado;
 
     @OneToOne
-    @JoinColumn(name= "rol", nullable = false)
-    private rol rol;
+    @JoinColumn(name= "rol")
+    private rol rolEmpleado;
 
     @ManyToOne
-    @JoinColumn(name = "EmpresaEmpleado", nullable = false)
-    private com.jaded.sistemagestionproyectos.model.empresa empresa;
+    @JoinColumn(name = "EmpresaEmpleado")
+    private empresa empresaEmpleado;
 
    /* @OneToMany
     @JoinColumn(name ="Transaction", nullable = false)

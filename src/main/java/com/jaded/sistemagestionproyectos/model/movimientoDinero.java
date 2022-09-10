@@ -12,18 +12,18 @@ public class movimientoDinero {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long IdMovimientoDinero;
 
-    @Column(length = 20, nullable = false)
+    @Column(length = 20)
     private String conceptoMovimiento;
 
-    @Column(columnDefinition = "decimal(15)", nullable = false)
+    @Column(columnDefinition = "decimal(15)")
     private float montoMovimiento;
 
     @ManyToOne
-    @JoinColumn(name = "IdEmpleado", nullable = false)
+    @JoinColumn(name = "IdEmpleado")
     private com.jaded.sistemagestionproyectos.model.empleado empleado;
 
     @ManyToOne
-    @JoinColumn(name = "Empresa", nullable = false)
+    @JoinColumn(name = "Empresa")
     private com.jaded.sistemagestionproyectos.model.empresa empresa;
 
 
