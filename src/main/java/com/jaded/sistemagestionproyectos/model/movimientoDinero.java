@@ -20,11 +20,11 @@ public class movimientoDinero {
 
     @ManyToOne
     @JoinColumn(name = "IdEmpleado")
-    private com.jaded.sistemagestionproyectos.model.empleado empleado;
+    private empleado empleadoAsignado;
 
     @ManyToOne
     @JoinColumn(name = "Empresa")
-    private com.jaded.sistemagestionproyectos.model.empresa empresa;
+    private empresa empresa;
 
 
 }

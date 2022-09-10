@@ -1,6 +1,7 @@
 package com.jaded.sistemagestionproyectos;
 
 import org.modelmapper.ModelMapper;
+import org.modelmapper.convention.MatchingStrategies;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -14,10 +15,14 @@ public class MapperConfig {
     }
     @Bean("empleadoMapper")
     public ModelMapper empleadoMapper(){
-        return new ModelMapper();
+        ModelMapper model =new ModelMapper();
+        model.getConfiguration().setAmbiguityIgnored(true);
+        return model;
+
     }
     @Bean("perfilMapper")
     public ModelMapper perfilMapper(){
         return new ModelMapper();
+
     }
 }
