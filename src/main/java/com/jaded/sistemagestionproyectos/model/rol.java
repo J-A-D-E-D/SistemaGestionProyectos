@@ -10,6 +10,7 @@ public class rol {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long IdRole;
 
+    @Column(length = 80)
     private String NombreRol;
 
 }

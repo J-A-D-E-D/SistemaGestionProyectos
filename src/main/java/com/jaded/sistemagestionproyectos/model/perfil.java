@@ -12,15 +12,15 @@ public class perfil {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long IdPerfil;
+    private long idPerfil;
 
-    @Column(length = 70, nullable = false)
+    @Column(length = 70)
     private String nombreUsuario;
 
-    @Column(length = 20, nullable = false)
+    @Column(length = 20)
     private String telefonoUsuario;
 
-    @Column(length = 30, nullable = false)
+    @Column(length = 30)
     private String imagenUsuario;
 
    /* @OneToOne
