@@ -1,6 +1,8 @@
 package com.jaded.sistemagestionproyectos.controller;
+import com.jaded.sistemagestionproyectos.dto.empleadoDTO;
 import com.jaded.sistemagestionproyectos.dto.empresaDTO;
 import com.jaded.sistemagestionproyectos.exception.modelNotFoundException;
+import com.jaded.sistemagestionproyectos.model.empleado;
 import com.jaded.sistemagestionproyectos.model.empresa;
 import com.jaded.sistemagestionproyectos.service.IempresaService;
 import org.modelmapper.ModelMapper;
@@ -47,9 +49,14 @@ public class empresaController {
             throw new modelNotFoundException("Id #"+empresadto.getIdEmpresa() + " no encontrado");
         }
         empresa em =service.update(mapper.map(empresadto, empresa.class));
-        empresaDTO dto = mapper.map(em, empresaDTO.class);
-        return new ResponseEntity<>(dto, HttpStatus.OK);
+        em.setNitEmpresa(em.getNitEmpresa());
+        em.setDireccionEmpresa(em.getDireccionEmpresa());
+        em.setNombreEmpresa(em.getNombreEmpresa());
+        em.setTelefonoEmpresa(em.getTelefonoEmpresa());
+        final empresa updateempresa = service.create(e);
+        return new ResponseEntity<>(HttpStatus.OK);
     }
+
 
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> delete(@PathVariable("id") Integer id) throws Exception{
