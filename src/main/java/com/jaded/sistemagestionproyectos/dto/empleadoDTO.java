@@ -11,8 +11,8 @@ import javax.validation.constraints.Min;
 @NoArgsConstructor
 @AllArgsConstructor
 public class empleadoDTO {
-        @Min(1)
-        @Max(999)
+        /*@Min(1)
+        @Max(999)*/
         private Integer idEmpleado;
         private String correoEmpleado;
         private String empresaEmpleado;

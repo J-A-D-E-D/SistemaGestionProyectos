@@ -12,7 +12,7 @@ import javax.validation.constraints.Email;
 public class empleado {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long idEmpleado;
+    private Integer idEmpleado;
 
     //@Email
     @Column(length = 70)
@@ -22,7 +22,7 @@ public class empleado {
     @JoinColumn(name = "idperfil")
     private perfil perfilEmpleado;
 
-    @OneToOne
+    @ManyToOne
     @JoinColumn(name= "idrole")
     private rol rolEmpleado;
 
