@@ -41,7 +41,7 @@ public class empleadoController {
         empleadoDTO dto = mapper.map(e, empleadoDTO.class);
         return new ResponseEntity<>(dto, HttpStatus.CREATED);
     }
-    @PatchMapping("/{id}")
+  /*  @PatchMapping("/{id}")
     public ResponseEntity<empleadoDTO> updatePartially ( @PathVariable(value ="id") Integer id , @Valid @RequestBody empleadoDTO empleadodto) throws Exception {
         empleado e= service.readById(id);
         if (e == null){
@@ -50,7 +50,21 @@ public class empleadoController {
         empleado em =service.update(mapper.map(empleadodto, empleado.class));
         empleadoDTO dto = mapper.map(em, empleadoDTO.class);
         return new ResponseEntity<>(dto, HttpStatus.OK);
-    }
+    }*/
+  @PatchMapping("/{id}")
+    public ResponseEntity<empleadoDTO> updatePartially ( @PathVariable(value ="id") Integer id , @Valid @RequestBody empleadoDTO empleadodto) throws Exception {
+      empleado e = service.readById(id);
+      if (e == null) {
+          throw new modelNotFoundException("Id #" + empleadodto.getIdEmpleado() + " no encontrado");
+      }
+      empleado em =service.update(mapper.map(empleadodto, empleado.class));
+      em.setEmpresaEmpleado(em.getEmpresaEmpleado());
+      em.setPerfilEmpleado(em.getPerfilEmpleado());
+      em.setCorreoEmpleado(em.getCorreoEmpleado());
+      final empleado updateempleado = service.create(e);
+      return new ResponseEntity<>(HttpStatus.OK);
+  }
+
 
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> delete(@PathVariable("id") Integer id) throws Exception{
