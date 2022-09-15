@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
@@ -27,6 +28,12 @@ public class empresaController {
     @Autowired
     @Qualifier("empresaMapper")
     private ModelMapper mapper;
+
+    @GetMapping("/")
+    public String viewHomePage(Model model){
+        model.addAttribute("listEnterprise",service.getAllEmployees());
+        return "index";
+    }
 
     @GetMapping
     public ResponseEntity<List<empresaDTO>> readAll() throws Exception{
