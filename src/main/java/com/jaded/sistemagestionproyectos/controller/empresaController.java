@@ -29,10 +29,10 @@ public class empresaController {
     @Qualifier("empresaMapper")
     private ModelMapper mapper;
 
-    @GetMapping("/")
+    /*@GetMapping("/")
     public String viewHomePage(Model model){
         model.addAttribute("listEnterprise",service.getAllEmployees());
-        return "index";
+        return "index";*/
     }
 
     @GetMapping
