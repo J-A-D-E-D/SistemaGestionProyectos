@@ -33,6 +33,17 @@ public class empresaController {
     public String viewHomePage(Model model){
         model.addAttribute("listEnterprise",service.getAllEmployees());
         return "index";*/
+    //}
+
+    @GetMapping("{id}")
+    public ResponseEntity<empresaDTO> readByID(@PathVariable(name = "id") Integer id) throws Exception{
+        empresa e = service.readById(id);
+        if (e == null){
+            throw new modelNotFoundException("Id no encontrado");
+        }
+        empresaDTO dto = mapper.map(e, empresaDTO.class);
+        return new ResponseEntity<>(dto ,HttpStatus.OK);
+
     }
 
     @GetMapping
