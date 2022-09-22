@@ -33,6 +33,9 @@ public class empresaController {
     public String viewHomePage(Model model){
         model.addAttribute("listEnterprise",service.getAllEmployees());
         return "index";*/
+<<<<<<< HEAD
+
+=======
     //}
 
     @GetMapping("{id}")
@@ -45,6 +48,7 @@ public class empresaController {
         return new ResponseEntity<>(dto ,HttpStatus.OK);
 
     }
+>>>>>>> 206f4a986d68f89d192c606ce08e2377fad462a5
 
     @GetMapping
     public ResponseEntity<List<empresaDTO>> readAll() throws Exception{
