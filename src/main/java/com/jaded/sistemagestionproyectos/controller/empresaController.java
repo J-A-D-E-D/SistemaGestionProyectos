@@ -33,7 +33,7 @@ public class empresaController {
     public String viewHomePage(Model model){
         model.addAttribute("listEnterprise",service.getAllEmployees());
         return "index";*/
-    }
+
 
     @GetMapping
     public ResponseEntity<List<empresaDTO>> readAll() throws Exception{
