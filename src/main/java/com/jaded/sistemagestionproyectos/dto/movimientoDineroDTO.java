@@ -13,5 +13,5 @@ public class movimientoDineroDTO {
     private long montoMovimiento;
     private boolean tipoMonto;
     private String conceptoMovimiento;
-    private String usuarioEncargado;
+    private empleadoDTO usuarioEncargado;
 }

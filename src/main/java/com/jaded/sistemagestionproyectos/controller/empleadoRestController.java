@@ -17,13 +17,16 @@ import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/employee")
-public class empleadoController {
+public class empleadoRestController {
     @Autowired
     private IempleadoService service;
 
     @Autowired
     @Qualifier("empleadoMapper")
     private ModelMapper mapper;
+
+
+
 
 
 

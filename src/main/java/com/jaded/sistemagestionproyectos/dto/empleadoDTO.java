@@ -1,5 +1,6 @@
 package com.jaded.sistemagestionproyectos.dto;
 
+import com.jaded.sistemagestionproyectos.model.empresa;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -15,8 +16,8 @@ public class empleadoDTO {
         @Max(999)*/
         private Integer idEmpleado;
         private String correoEmpleado;
-        private String empresaEmpleado;
-        private String perfilEmpleado;
-        private String rolEmpleado;
+        private empresaDTO empresaEmpleado;
+        private perfilDTO perfilEmpleado;
+        private roleDTO rolEmpleado;
         // comentario de prueba Julio //
     }
