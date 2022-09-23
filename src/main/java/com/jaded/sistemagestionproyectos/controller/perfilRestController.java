@@ -1,9 +1,7 @@
 package com.jaded.sistemagestionproyectos.controller;
 
-import com.jaded.sistemagestionproyectos.dto.empresaDTO;
 import com.jaded.sistemagestionproyectos.dto.perfilDTO;
 import com.jaded.sistemagestionproyectos.exception.modelNotFoundException;
-import com.jaded.sistemagestionproyectos.model.empresa;
 import com.jaded.sistemagestionproyectos.model.perfil;
 import com.jaded.sistemagestionproyectos.service.IperfilService;
 import org.modelmapper.ModelMapper;
@@ -19,7 +17,7 @@ import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/user")
-public class perfilController {
+public class perfilRestController {
     @Autowired
     public IperfilService service;
 

@@ -25,5 +25,10 @@ public class MapperConfig {
         return new ModelMapper();
 
     }
-    
+
+    /*@Bean ("empresaControllerMapper")
+    public  ModelMapper empresaControllerMapper(){
+        return new ModelMapper();
+    }
+*/
 }

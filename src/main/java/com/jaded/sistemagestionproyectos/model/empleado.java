@@ -1,5 +1,6 @@
 package com.jaded.sistemagestionproyectos.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -28,6 +29,7 @@ public class empleado {
 
     @ManyToOne
     @JoinColumn(name = "idempresa")
+    @JsonIgnoreProperties({ "hibernateLazyInitializer", "handler" })
     private empresa empresaEmpleado;
 
    /* @OneToMany
