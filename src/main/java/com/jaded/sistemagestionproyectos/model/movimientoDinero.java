@@ -10,21 +10,21 @@ import javax.persistence.*;
 public class movimientoDinero {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long IdMovimientoDinero;
+    private Integer IdMovimientoDinero;
 
     @Column(length = 20)
     private String conceptoMovimiento;
 
     @Column(columnDefinition = "decimal(15)")
-    private float montoMovimiento;
+    private long montoMovimiento;
 
     @ManyToOne
     @JoinColumn(name = "IdEmpleado")
     private empleado empleadoAsignado;
 
-    @ManyToOne
+   /* @ManyToOne
     @JoinColumn(name = "Empresa")
     private empresa empresa;
-
+*/
 
 }

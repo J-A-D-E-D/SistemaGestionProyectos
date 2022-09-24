@@ -5,7 +5,9 @@ import com.jaded.sistemagestionproyectos.repository.Igeneric;
 import com.jaded.sistemagestionproyectos.repository.ImovimientoDineroRepo;
 import com.jaded.sistemagestionproyectos.service.ImovimientoDineroService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+@Service
 public class MovimientoDineroImpl extends crudImp<movimientoDinero, Integer> implements ImovimientoDineroService {
     @Autowired
     private ImovimientoDineroRepo repo;

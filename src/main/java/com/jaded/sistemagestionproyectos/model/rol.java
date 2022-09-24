@@ -1,7 +1,10 @@
 package com.jaded.sistemagestionproyectos.model;
 
+import lombok.Data;
+
 import javax.persistence.*;
 
+@Data
 @Entity
 @Table(name = "rol")
 public class rol {
