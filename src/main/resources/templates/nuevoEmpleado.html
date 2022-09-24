@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org/">
+<head>
+  <meta charset="UTF-8">
+  <title>Guardar Empleado</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+  <h1>Lista de Empleado</h1>
+  <hr>
+  <h2>Guardar Empleado</h2>
+
+  <form action="#" th:action="@{/guardarEmpleado}" th:object="${empleado}" method="post">
+    <input type="text" th:field="*{perfilEmpleado}" placeholder="Perfil Empleado" class="form-control mb-4 col-4">
+    <input type="text" th:field="*{correoEmpleado}" placeholder="Correo" class="form-control mb-4 col-4">
+    <input type="text" th:field="*{empresaEmpleado}" placeholder="Empresa" class="form-control mb-4 col-4">
+    <input type="text" th:field="*{rolEmpleado}" placeholder="Rol" class="form-control mb-4 col-4">
+
+    <button type="submit" class="btn btn-info col-2">Guardar</button>
+  </form>
+  <hr>
+  <a th:href="@{/empleado}">Regresar</a>
+</div>
+
+</body>
+</html>

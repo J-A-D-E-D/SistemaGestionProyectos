@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org/">
+<head>
+  <meta charset="UTF-8">
+  <title>Editar Movimiento</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+  <h1>Lista de MovDinero</h1>
+  <hr>
+  <h2>Editar Movimiento</h2>
+
+  <form action="#" th:action="@{/guardarMovDinero}" th:object="${movimientoDinero}" method="post">
+
+    <input type="hidden" th:field="*{idmovimientoDinero}"/>
+
+    <input type="text" th:field="*{montoMovimiento}" class="form-control mb-4 col-4">
+    <input type="text" th:field="*{conceptoMovimiento}" class="form-control mb-4 col-4">
+    <input type="text" th:field="*{empleadoAsignado}" class="form-control mb-4 col-4">
+    <input type="text" th:field="*{direccionEmpresa}" class="form-control mb-4 col-4">
+    <button type="submit" class="btn btn-info col-2">Actualizar Empresa</button>
+  </form>
+  <hr>
+  <a th:href="@{movDinero/}">Regresar</a>
+</div>
+</body>
+</html>

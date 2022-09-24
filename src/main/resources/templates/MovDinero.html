@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de MovDinero</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+<body>
+<div class="container my-2">
+    <h1>Lista de Movimientos</h1>
+
+    <a th:href="@{/formularioMovDinero}" class="btn btn-primary btn-sm mb-3">Agregar Movimiento</a>
+
+    <table border="1" class="table table-striped table-responsive-md">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Monto</th>
+            <th>Concepto</th>
+            <th>Tipo</th>
+            <th>Empleado Encargado</th>
+            <th>Accion</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="movimientoDinero: ${listaMovDinero}">
+            <td th:text="${movimientoDinero.IdMovimientoDinero}"></td>
+            <td th:text="${movimientoDinero.montoMovimiento}"></td>
+            <td th:text="${movimientoDinero.conceptoMovimiento}"></td>
+            <td th:text="${movimientoDinero.empleadoAsignado}"></td>
+            <td th:text="${empleado.rolEmpleado}"></td>
+
+            <td> <a th:href="@{/editarMovDinero/{id}(id=${movimientoDinero.idMovimientoDinero})}" class="btn btn-primary">Actualizar</a>
+                <a th:href="@{/borrarMovDinero/{id}(id=${movimientoDinero.idMovimientoDinero})}" class="btn btn-danger">Eliminar</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>
