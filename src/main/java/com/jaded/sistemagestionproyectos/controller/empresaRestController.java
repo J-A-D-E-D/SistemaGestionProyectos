@@ -30,7 +30,7 @@ public class empresaRestController {
    @GetMapping("/verempresas")
     public String verempresas (Model model) throws Exception {
         model.addAttribute("listaEmpresas",service.readAll());
-        return "empresas.html";
+        return "empresas";
     }
 
     @GetMapping("{id}")

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <title>Guardar Empresa</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+          crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+    <h1>Lista de Empresas</h1>
+    <hr>
+    <h2>Guardar Empresa</h2>
+
+    <form action="#" th:action="@{/guardarEmpresa}" th:object="${empresa}" method="post">
+        <input type="text" th:field="*{nombreEmpresa}" placeholder="Nombre Empresa" class="form-control mb-4 col-4">
+        <input type="text" th:field="*{nitEmpresa}" placeholder="NIT" class="form-control mb-4 col-4">
+        <input type="text" th:field="*{telefonoEmpresa}" placeholder="Telefono" class="form-control mb-4 col-4">
+        <input type="text" th:field="*{direccionEmpresa}" placeholder="Direccion " class="form-control mb-4 col-4">
+
+        <button type="submit" class="btn btn-info col-2">Guardar</button>
+    </form>
+    <hr>
+    <a th:href="@{/empresa}">Regresar</a>
+</div>
+
+</body>
+</html>
