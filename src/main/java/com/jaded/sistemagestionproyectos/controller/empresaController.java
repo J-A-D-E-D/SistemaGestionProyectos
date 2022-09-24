@@ -53,7 +53,7 @@ public class empresaController {
     }
 
     @GetMapping("/borrarEmpresa/{id}")
-    public String deleteEmployee(@PathVariable(value="id") Integer id) throws Exception {
+    public String deleteEnterprise(@PathVariable(value="id") Integer id) throws Exception {
 
         this.service.delete(id);
         return "redirect:/empresa";
