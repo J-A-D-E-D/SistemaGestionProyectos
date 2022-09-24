@@ -65,11 +65,12 @@ public class empresaRestController {
             throw new modelNotFoundException("Id #"+empresadto.getIdEmpresa() + " no encontrado");
         }
         empresa em =service.update(mapper.map(empresadto, empresa.class));
-        em.setNitEmpresa(em.getNitEmpresa());
+        empresaDTO dto = mapper.map(em, empresaDTO.class);
+       /* em.setNitEmpresa(em.getNitEmpresa());
         em.setDireccionEmpresa(em.getDireccionEmpresa());
         em.setNombreEmpresa(em.getNombreEmpresa());
         em.setTelefonoEmpresa(em.getTelefonoEmpresa());
-        final empresa updateempresa = service.create(e);
+        final empresa updateempresa = service.create(e);*/
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
