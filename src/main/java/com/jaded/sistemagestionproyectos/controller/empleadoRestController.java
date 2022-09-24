@@ -61,10 +61,12 @@ public class empleadoRestController {
           throw new modelNotFoundException("Id #" + empleadodto.getIdEmpleado() + " no encontrado");
       }
       empleado em =service.update(mapper.map(empleadodto, empleado.class));
-      em.setEmpresaEmpleado(em.getEmpresaEmpleado());
+      empleadoDTO dto =mapper.map(em, empleadoDTO.class);
+  /*    em.setEmpresaEmpleado(em.getEmpresaEmpleado());
       em.setPerfilEmpleado(em.getPerfilEmpleado());
       em.setCorreoEmpleado(em.getCorreoEmpleado());
-      final empleado updateempleado = service.create(e);
+      em.setRolEmpleado(em.getRolEmpleado());
+      final empleado updateempleado = service.create(e);*/
       return new ResponseEntity<>(HttpStatus.OK);
   }
 
