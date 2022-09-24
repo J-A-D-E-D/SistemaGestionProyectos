@@ -11,7 +11,6 @@ public class movimientoDineroDTO {
 
     private Integer idMovimiento;
     private long montoMovimiento;
-    private boolean tipoMonto;
     private String conceptoMovimiento;
-    private empleadoDTO usuarioEncargado;
+    private empleadoDTO empleadoAsignado;
 }

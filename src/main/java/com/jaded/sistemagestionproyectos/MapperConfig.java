@@ -26,9 +26,8 @@ public class MapperConfig {
 
     }
 
-    /*@Bean ("empresaControllerMapper")
+    @Bean ("movDineroMapper")
     public  ModelMapper empresaControllerMapper(){
         return new ModelMapper();
     }
-*/
 }
