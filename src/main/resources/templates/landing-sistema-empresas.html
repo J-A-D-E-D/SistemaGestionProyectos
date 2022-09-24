@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html style="font-size: 16px;" lang="es"><head>
+<html style="font-size: 16px;" lang="es" xmlns:th="http://www.thymeleaf.org"><head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
     <meta name="description" content="">
     <title>landing sistema empresas</title>
-    <link rel="stylesheet" href="HojaEstilo.css" media="screen">
-<link rel="stylesheet" href="landing-sistema-empresas.css" media="screen">
+    <link rel="stylesheet" th:href="@{static/HojaEstilo.css}" media="screen" type ="text/css">
+<link rel="stylesheet" th:href="@{static/landing-sistema-empresas.css}" media="screen" type ="text/css">
     <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
     <script class="u-script" type="text/javascript" src="javastyle.js" defer=""></script>
     <meta name="generator" content="Nicepage 4.18.5, nicepage.com">
@@ -106,46 +106,21 @@
             </colgroup>
             <thead class="u-black u-table-header u-table-header-1">
               <tr style="height: 21px;">
+                <th class="u-border-1 u-border-black u-table-cell">ID</th>
                 <th class="u-border-1 u-border-black u-table-cell">Nombre</th>
                 <th class="u-border-1 u-border-black u-table-cell">NIT</th>
+                <th class="u-border-1 u-border-black u-table-cell">Telefono</th>
                 <th class="u-border-1 u-border-black u-table-cell">Direccion</th>
-                <th class="u-border-1 u-border-black u-table-cell">telefono</th>
-                <th class="u-border-1 u-border-black u-table-cell">Email</th>
-                <th class="u-border-1 u-border-black u-table-cell">Lider</th>
+
               </tr>
             </thead>
             <tbody class="u-table-body">
-              <tr style="height: 75px;">
-                <td class="u-border-1 u-border-grey-30 u-table-cell">Row 1</td>
-                <td class="u-border-1 u-border-grey-30 u-table-cell">Description</td>
-                <td class="u-border-1 u-border-grey-30 u-table-cell">Description</td>
-                <td class="u-border-1 u-border-grey-30 u-table-cell">Description</td>
-                <td class="u-border-1 u-border-grey-30 u-table-cell"></td>
-                <td class="u-border-1 u-border-grey-30 u-table-cell"></td>
-              </tr>
-              <tr style="height: 76px;">
-                <td class="u-border-1 u-border-grey-30 u-table-cell">Row 2</td>
-                <td class="u-border-1 u-border-grey-30 u-table-cell">Description</td>
-                <td class="u-border-1 u-border-grey-30 u-table-cell">Description</td>
-                <td class="u-border-1 u-border-grey-30 u-table-cell">Description</td>
-                <td class="u-border-1 u-border-grey-30 u-table-cell"></td>
-                <td class="u-border-1 u-border-grey-30 u-table-cell"></td>
-              </tr>
-              <tr style="height: 76px;">
-                <td class="u-border-1 u-border-grey-30 u-table-cell">Row 3</td>
-                <td class="u-border-1 u-border-grey-30 u-table-cell">Description</td>
-                <td class="u-border-1 u-border-grey-30 u-table-cell">Description</td>
-                <td class="u-border-1 u-border-grey-30 u-table-cell">Description</td>
-                <td class="u-border-1 u-border-grey-30 u-table-cell"></td>
-                <td class="u-border-1 u-border-grey-30 u-table-cell"></td>
-              </tr>
-              <tr style="height: 76px;">
-                <td class="u-border-1 u-border-grey-30 u-table-cell">Row 4</td>
-                <td class="u-border-1 u-border-grey-30 u-table-cell">Description</td>
-                <td class="u-border-1 u-border-grey-30 u-table-cell">Description</td>
-                <td class="u-border-1 u-border-grey-30 u-table-cell">Description</td>
-                <td class="u-border-1 u-border-grey-30 u-table-cell"></td>
-                <td class="u-border-1 u-border-grey-30 u-table-cell"></td>
+              <tr style="height: 75px;" th:each="empresa: ${listaEmpresas}" >
+                <td class="u-border-1 u-border-grey-30 u-table-cell" th:text="${empresa.idEmpresa}" > </td>
+                <td class="u-border-1 u-border-grey-30 u-table-cell" th:text="${empresa.nombreEmpresa}"></td>
+                <td class="u-border-1 u-border-grey-30 u-table-cell" th:text="${empresa.nitEmpresa}"></td>
+                <td class="u-border-1 u-border-grey-30 u-table-cell" th:text="${empresa.telefonoEmpresa}"></td>
+                <td class="u-border-1 u-border-grey-30 u-table-cell" th:text="${empresa.direccionEmpresa}"></td>
               </tr>
             </tbody>
           </table>
