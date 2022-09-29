@@ -15,23 +15,23 @@ public class movDineroController {
     @Autowired
     private ImovimientoDineroService service;
 
-    @GetMapping("/Transaccion")
+    @GetMapping("/MovDinero")
     public String tablaMovDinero (Model model) throws Exception {
         model.addAttribute("listaMovDinero",service.readAll());
-        return "movimientoDinero";
+        return "MovDinero";
     }
 
     @GetMapping("/formularioMovDinero")
     public String formularioMovDinero (Model model){
         movimientoDinero movimientoDinero = new movimientoDinero();
         model.addAttribute("movimientoDinero", movimientoDinero);
-        return "movimientoDinero";
+        return "nuevoMovDinero";
     }
 
     @PostMapping("/guardarMovDinero")
     public String guardarMovDinero (@ModelAttribute("movimientoDinero") movimientoDinero mov) throws Exception {
         service.create(mov);
-        return "redirect:/movimientoDinero";
+        return "redirect:/MovDinero";
 
     }
 
@@ -49,6 +49,6 @@ public class movDineroController {
     public String deleteTransaction(@PathVariable(value="id") Integer id) throws Exception {
 
         this.service.delete(id);
-        return "redirect:/movimientoDinero";
+        return "redirect:/MovDinero";
     }
 }

@@ -32,6 +32,9 @@ public class empleado {
     @JsonIgnoreProperties({ "hibernateLazyInitializer", "handler" })
     private empresa empresaEmpleado;
 
+    @Column
+    private String password;
+
    /* @OneToMany
     @JoinColumn(name ="Transaction", nullable = false)
     private com.jaded.sistemagestionproyectos.model.movimientoDinero movimientoDinero;*/

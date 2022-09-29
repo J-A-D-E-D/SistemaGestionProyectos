@@ -15,7 +15,7 @@
     <thead>
     <tr>
       <th>ID</th>
-      <th>Perfil</th>
+      <th>Nombre</th>
       <th>Correo</th>
       <th>Empresa</th>
       <th>Rol</th>
@@ -25,10 +25,10 @@
     <tbody>
     <tr th:each="empleado: ${listaEmpleado}">
       <td th:text="${empleado.idEmpleado}"></td>
-      <td th:text="${empleado.perfilEmpleado}"></td>
+      <td th:text="${empleado.perfilEmpleado.nombreUsuario}"></td>
       <td th:text="${empleado.correoEmpleado}"></td>
-      <td th:text="${empleado.empresaEmpleado}"></td>
-      <td th:text="${empleado.rolEmpleado}"></td>
+      <td th:text="${empleado.empresaEmpleado.nombreEmpresa}"></td>
+      <td th:text="${empleado.rolEmpleado.NombreRol}"></td>
 
       <td> <a th:href="@{/editarEmpleado/{id}(id=${empleado.idEmpleado})}" class="btn btn-primary">Actualizar</a>
         <a th:href="@{/borrarEmpleado/{id}(id=${empleado.idEmpleado})}" class="btn btn-danger">Eliminar</a>

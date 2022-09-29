@@ -17,7 +17,6 @@
             <th>ID</th>
             <th>Monto</th>
             <th>Concepto</th>
-            <th>Tipo</th>
             <th>Empleado Encargado</th>
             <th>Accion</th>
         </tr>
@@ -27,8 +26,8 @@
             <td th:text="${movimientoDinero.IdMovimientoDinero}"></td>
             <td th:text="${movimientoDinero.montoMovimiento}"></td>
             <td th:text="${movimientoDinero.conceptoMovimiento}"></td>
-            <td th:text="${movimientoDinero.empleadoAsignado}"></td>
-            <td th:text="${empleado.rolEmpleado}"></td>
+
+            <td th:text="${movimientoDinero.empleadoAsignado.perfilEmpleado.nombreUsuario}"></td>
 
             <td> <a th:href="@{/editarMovDinero/{id}(id=${movimientoDinero.idMovimientoDinero})}" class="btn btn-primary">Actualizar</a>
                 <a th:href="@{/borrarMovDinero/{id}(id=${movimientoDinero.idMovimientoDinero})}" class="btn btn-danger">Eliminar</a>
