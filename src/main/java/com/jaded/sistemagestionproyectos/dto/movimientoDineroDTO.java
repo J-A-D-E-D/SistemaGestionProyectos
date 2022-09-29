@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class movimientoDineroDTO {
 
-    private Integer idMovimiento;
+    private Integer idMovimientoDinero;
     private long montoMovimiento;
     private String conceptoMovimiento;
     private empleadoDTO empleadoAsignado;

@@ -14,7 +14,7 @@
   <h2>Guardar Empleado</h2>
 
   <form action="#" th:action="@{/guardarEmpleado}" th:object="${empleado}" method="post">
-    <input type="text" th:field="*{perfilEmpleado}" placeholder="Perfil Empleado" class="form-control mb-4 col-4">
+    <input type="text" th:field="*{perfilEmpleado}" placeholder="Nombre" class="form-control mb-4 col-4">
     <input type="text" th:field="*{correoEmpleado}" placeholder="Correo" class="form-control mb-4 col-4">
     <input type="text" th:field="*{empresaEmpleado}" placeholder="Empresa" class="form-control mb-4 col-4">
     <input type="text" th:field="*{rolEmpleado}" placeholder="Rol" class="form-control mb-4 col-4">
