@@ -49,7 +49,7 @@ public class movimientoDineroRestController {
     public ResponseEntity<movimientoDineroDTO> updatePartially ( @PathVariable(value ="id") Integer id , @Valid @RequestBody movimientoDineroDTO movdinerodto) throws Exception {
         movimientoDinero m = service.readById(id);
         if (m == null) {
-            throw new modelNotFoundException("Id #" + movdinerodto.getIdMovimiento() + " no encontrado");
+            throw new modelNotFoundException("Id #" + movdinerodto.getIdMovimientoDinero() + " no encontrado");
         }
         movimientoDinero md =service.update(mapper.map(movdinerodto, movimientoDinero.class));
         movimientoDineroDTO dto =mapper.map(md, movimientoDineroDTO.class);

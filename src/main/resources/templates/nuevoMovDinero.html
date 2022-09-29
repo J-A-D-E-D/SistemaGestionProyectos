@@ -13,16 +13,15 @@
   <hr>
   <h2>Guardar MovDinero</h2>
 
-  <form action="#" th:action="@{/guardarMovDinero}" th:object="${movDinero}" method="post">
-    <input type="text" th:field="*{montoMovimiento}" placeholder="Perfil Empleado" class="form-control mb-4 col-4">
-    <input type="text" th:field="*{conceptoMovimiento}" placeholder="Correo" class="form-control mb-4 col-4">
-    <input type="text" th:field="*{empleadoAsignado}" placeholder="Empresa" class="form-control mb-4 col-4">
-    <input type="text" th:field="*{rolEmpleado}" placeholder="Rol" class="form-control mb-4 col-4">
+  <form action="#" th:action="@{/guardarMovDinero}" th:object="${movimientoDinero}" method="post">
+    <input type="text" th:field="*{montoMovimiento}" placeholder="Monto" class="form-control mb-4 col-4">
+    <input type="text" th:field="*{conceptoMovimiento}" placeholder="Concepto" class="form-control mb-4 col-4">
+    <input type="text" th:field="*{empleadoAsignado}" placeholder="Empleado Asignado" class="form-control mb-4 col-4">
 
     <button type="submit" class="btn btn-info col-2">Guardar</button>
   </form>
   <hr>
-  <a th:href="@{/movDinero}">Regresar</a>
+  <a th:href="@{/MovDinero}">Regresar</a>
 </div>
 
 </body>

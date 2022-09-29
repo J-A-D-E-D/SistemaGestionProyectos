@@ -15,16 +15,15 @@
 
   <form action="#" th:action="@{/guardarMovDinero}" th:object="${movimientoDinero}" method="post">
 
-    <input type="hidden" th:field="*{idmovimientoDinero}"/>
+    <input type="hidden" th:field="*{idMovimientoDinero}"/>
 
     <input type="text" th:field="*{montoMovimiento}" class="form-control mb-4 col-4">
     <input type="text" th:field="*{conceptoMovimiento}" class="form-control mb-4 col-4">
     <input type="text" th:field="*{empleadoAsignado}" class="form-control mb-4 col-4">
-    <input type="text" th:field="*{direccionEmpresa}" class="form-control mb-4 col-4">
-    <button type="submit" class="btn btn-info col-2">Actualizar Empresa</button>
+    <button type="submit" class="btn btn-info col-2">Actualizar Movimiento</button>
   </form>
   <hr>
-  <a th:href="@{movDinero/}">Regresar</a>
+  <a th:href="@{/MovDinero}">Regresar</a>
 </div>
 </body>
 </html>
